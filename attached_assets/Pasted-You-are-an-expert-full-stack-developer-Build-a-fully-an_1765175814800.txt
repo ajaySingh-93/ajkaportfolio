@@ -1,0 +1,191 @@
+You are an expert full-stack developer. Build a **fully animated personal portfolio website** using:
+
+- Next.js (latest, App Router)
+- TypeScript (strict)
+- three.js (for 3D visuals/scene)
+- barba.js (for smooth page transitions)
+- CSS (Tailwind or CSS Modules; pick one and set it up properly)
+
+Overall goals:
+- Gen-Z **dark rave theme** (neon, glitch, grain, cyberpunk vibes)
+- Fully responsive (mobile, tablet, desktop)
+- Smooth but performant animations
+- Clean, modular code structure
+- Easy to customize content (skills, education, experience, projects, etc.)
+
+------------------------------------------------
+1. PROJECT SETUP
+------------------------------------------------
+- Use **Next.js App Router** with TypeScript.
+- Set `"strict": true` in `tsconfig.json`.
+- Configure a global layout with:
+  - `<html lang="en">` and proper `<head>` metadata.
+  - Global styles for dark theme.
+- Install and configure:
+  - `three` and `@types/three`
+  - `barba.js`
+  - (Optional but recommended) `framer-motion` for 2D UI animations.
+- Use a clean, modern folder structure, for example:
+  - `src/app/` for routes
+  - `src/components/` for reusable UI components
+  - `src/lib/` for helpers/config
+  - `src/types/` for TypeScript interfaces
+
+------------------------------------------------
+2. THEME & VISUAL STYLE (GEN-Z DARK RAVE)
+------------------------------------------------
+Design requirements:
+- Base background: **very dark** (near black) with subtle noise/grain texture.
+- Accent colors: neon (e.g., neon purple, cyan, magenta, green).
+- Use **glow effects**, gradients, and subtle glitches.
+- Typography:
+  - One bold, futuristic display font for headings.
+  - One clean sans-serif font for body text.
+- Hover effects on buttons/cards:
+  - Scale, glow, or outline animations.
+- Use **glassmorphism** / translucent panels for cards (skills, projects, etc.).
+- Add subtle animated background:
+  - Either a **three.js 3D scene** (e.g., floating shapes/particles reacting to mouse movement)
+  - Or animated gradient + particles.
+
+------------------------------------------------
+3. PAGES & SECTIONS
+------------------------------------------------
+Use these main routes (App Router):
+
+/ (Home)
+- Hero section with:
+  - Name: `<YOUR_NAME>`
+  - Title: e.g., "Aspiring Software Developer" or "Full-Stack Dev & Problem Solver"
+  - Short tagline in one line (editable).
+  - Call-to-action buttons:
+    - "View Projects"
+    - "Download Resume" (placeholder link)
+  - Include a **three.js 3D visual** (e.g., floating orb, polygonal head, or abstract rave object).
+- Animated introduction text that fades/glitches in.
+
+/about
+- Section: "About Me"
+  - Text placeholder: `<ABOUT_ME_TEXT>`
+- Show a timeline / cards for:
+  - Education (college, course, year, etc.)
+  - Certifications / achievements (optional).
+- Add a small fun fact / personality section (e.g., “I love hackathons, late-night coding, and EDM.”).
+- Include a stylized avatar or silhouette graphic.
+
+/skills
+- Display skills as categorized groups:
+  - Programming Languages
+  - Web Technologies (HTML, CSS, JS, React, Next.js, etc.)
+  - Tools & Platforms (Git, GitHub, VS Code, Replit, etc.)
+- Use a **radial, grid, or tag-cloud style** layout with animated hover.
+- Optionally show a skill level indicator (e.g., beginner/intermediate/advanced) in a clean way (no fake bars).
+
+/projects
+- Show a **grid of project cards**, each card including:
+  - Project title
+  - Short description
+  - Tech stack used
+  - Links: GitHub / Live demo (optional; placeholders are fine)
+- On click of a card, show a **project detail** overlay or separate route with:
+  - More detailed description
+  - Screenshots (use placeholder images)
+  - Role & responsibilities
+  - Key learnings / outcomes
+- Add subtle project entrance animations (staggered fade-in/slide-up).
+
+/experience
+- Timeline of internships, freelance work, or academic projects.
+- Each entry:
+  - Role
+  - Organization (e.g., "Bireena Info Tech, Patna")
+  - Time period
+  - 3–4 bullet points describing responsibilities and achievements.
+- Animate the timeline as the user scrolls.
+
+/contact
+- Simple contact form with fields:
+  - Name
+  - Email
+  - Message
+- Form should have:
+  - Basic validation (required fields, email format).
+  - Fake submit handler with success toast/snackbar or message (no real backend needed).
+- Also display:
+  - Email link
+  - LinkedIn, GitHub, and other social icons (with hover glow).
+
+------------------------------------------------
+4. GLOBAL COMPONENTS & NAVIGATION
+------------------------------------------------
+- Create a **persistent top navigation bar**:
+  - Logo / name on the left.
+  - Links to: Home, About, Skills, Projects, Experience, Contact.
+  - Highlight current route.
+- Add a **mobile menu** (hamburger > full-screen menu with neon animation).
+- Footer:
+  - Short text: "© `<CURRENT_YEAR>` `<YOUR_NAME>`"
+  - Social links repeated.
+
+Unique Gen-Z feature:
+- Add a **command palette** or shortcut:
+  - Press `Ctrl + K` (or `Cmd + K` on Mac) to open a small modal.
+  - Allows quick navigation to sections/pages.
+- Optional: Add a small **"Now Playing"** pill (fake) referencing EDM/lofi for the rave vibe.
+
+------------------------------------------------
+5. ANIMATIONS & PAGE TRANSITIONS
+------------------------------------------------
+barba.js:
+- Integrate **barba.js** for smooth page transitions between routes:
+  - Fade + slide transitions.
+  - Optionally a glitch effect or color wipe when navigating.
+
+Other animations:
+- Use `framer-motion` (if you choose to install it) or CSS transitions for:
+  - Hero text entrance.
+  - Cards hover states.
+  - Section entrance on scroll (fade-up/stagger).
+
+three.js:
+- Implement a reusable `Scene` component:
+  - Abstract shapes (e.g., torus, spheres, low-poly shapes) with neon emissive materials.
+  - Subtle rotation and camera movement.
+  - Responsive sizing (works well on mobile too; disable or simplify effects on very small screens for performance).
+
+------------------------------------------------
+6. DATA & CONFIG
+------------------------------------------------
+- Store portfolio content in a **config file** / TypeScript object(s), for example:
+  - `src/data/profile.ts` for name, title, about.
+  - `src/data/skills.ts` for skills array.
+  - `src/data/projects.ts` for projects.
+  - `src/data/experience.ts` for experience items.
+- Use TypeScript interfaces for these data objects to ensure type safety.
+- Make it easy to update text without touching layout logic.
+
+------------------------------------------------
+7. ACCESSIBILITY & PERFORMANCE
+------------------------------------------------
+- Use semantic HTML elements for sections (`<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`).
+- Ensure sufficient contrast even with neon colors.
+- Add `aria-label`s where needed (e.g., for icons, hamburger menu).
+- Optimize three.js and animations:
+  - Avoid extremely heavy scenes.
+  - Limit animation complexity on mobile.
+- Use Next.js `Image` component for any images.
+
+------------------------------------------------
+8. FINAL DELIVERABLE
+------------------------------------------------
+- Fully working Next.js + TypeScript portfolio with all routes and sections described above.
+- All animations and transitions wired up (three.js, barba.js, basic motion).
+- Clear instructions in a `README.md`:
+  - How to run the project.
+  - Where to edit content (skills, education, experience, projects, about text, links).
+- Code should be:
+  - Well-organized.
+  - Commented where needed (especially for three.js and barba.js integration).
+  - Easy for me to extend later.
+
+Now, please generate the complete project, including file structure, all pages, components, and minimal styling consistent with the **Gen-Z dark rave** theme described above.
