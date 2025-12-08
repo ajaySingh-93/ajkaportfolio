@@ -1,5 +1,5 @@
 export const profile = {
-  name: "ALEX_DEV",
+  name: "AJAY_DEV",
   title: "Full-Stack Architect & Digital Alchemist",
   tagline: "Building the future of the web, one pixel at a time.",
   about: `I'm a Gen-Z developer obsessed with creating immersive digital experiences. 
@@ -9,6 +9,6 @@ export const profile = {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "alex@example.com"
+    email: "ajay@example.com"
   }
 };

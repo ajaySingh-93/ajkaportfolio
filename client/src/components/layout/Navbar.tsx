@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
           <a className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-cyan hover:text-glow transition-all">
-            ALEX_DEV
+            AJAY_DEV
           </a>
         </Link>
 
