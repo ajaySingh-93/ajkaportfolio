@@ -37,7 +37,7 @@ export default function Home() {
 
         {/* Avatar: centered on mobile, right side on desktop */}
         <div className="hero-avatar-wrapper flex justify-center mb-6 md:mb-0 md:items-center flex-shrink-0 relative order-first md:order-last">
-          <img src="/ajay-profile.jpg" alt="Ajay Kumar" className="hero-avatar" />
+          <img src="/image.png" alt="Ajay Kumar" className="hero-avatar" />
         </div>
       </div>
     </Section>
