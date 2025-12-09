@@ -124,18 +124,27 @@
   }
 
   /* Hero Avatar Styles */
+  .hero-avatar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .hero-avatar {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
     border: 3px solid #4ef0ff;
     box-shadow: 0 0 25px rgba(78, 240, 255, 0.7),
                 0 0 45px rgba(255, 0, 255, 0.4);
+    overflow: hidden;
     animation: floatImg 4s ease-in-out infinite;
     transition: transform 0.4s ease;
     position: relative;
     z-index: 10;
+    background: transparent;
   }
 
   .hero-avatar:hover {

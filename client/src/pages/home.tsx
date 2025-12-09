@@ -8,11 +8,6 @@ export default function Home() {
   return (
     <Section className="flex flex-col justify-center items-center md:items-start container mx-auto px-4">
       <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between md:gap-16 gap-8">
-        {/* Mobile: Image centered above heading */}
-        <div className="flex justify-center md:hidden mb-6">
-          <img src="/ajay-profile.jpg" alt="Ajay Kumar" className="hero-avatar" />
-        </div>
-
         {/* Text Content */}
         <div className="space-y-6 max-w-3xl flex-1 md:flex-none">
           <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-tight">
@@ -40,8 +35,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Desktop: Image on the right - balanced with neon sphere */}
-        <div className="hidden md:flex md:justify-center md:items-center flex-shrink-0 relative">
+        {/* Avatar: centered on mobile, right side on desktop */}
+        <div className="hero-avatar-wrapper flex justify-center mb-6 md:mb-0 md:items-center flex-shrink-0 relative order-first md:order-last">
           <img src="/ajay-profile.jpg" alt="Ajay Kumar" className="hero-avatar" />
         </div>
       </div>
