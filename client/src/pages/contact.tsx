@@ -8,6 +8,8 @@ import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { profile } from "@/data/profile";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is too short"),
@@ -41,6 +43,39 @@ export default function Contact() {
       <h1 className="text-5xl font-display font-bold text-white mb-8 text-center">
         GET_IN_<span className="text-neon-green">TOUCH</span>
       </h1>
+
+      <div className="glass-panel p-6 rounded-2xl border border-white/10 mb-6 flex flex-col gap-3 text-gray-300">
+        <div className="flex items-center gap-3">
+          <Mail className="w-4 h-4 text-neon-green" />
+          <a href={`mailto:${profile.social.email}`} className="hover:text-neon-green transition-colors">
+            {profile.social.email}
+          </a>
+        </div>
+        {profile.social.phone ? (
+          <div className="flex items-center gap-3">
+            <Phone className="w-4 h-4 text-neon-green" />
+            <a href={`tel:${profile.social.phone}`} className="hover:text-neon-green transition-colors">
+              {profile.social.phone}
+            </a>
+          </div>
+        ) : null}
+        <div className="flex items-center gap-3">
+          <Github className="w-4 h-4 text-neon-green" />
+          <a href={profile.social.github} target="_blank" rel="noreferrer" className="hover:text-neon-green transition-colors">
+            {profile.social.github}
+          </a>
+        </div>
+        <div className="flex items-center gap-3">
+          <Linkedin className="w-4 h-4 text-neon-green" />
+          <a href={profile.social.linkedin} target="_blank" rel="noreferrer" className="hover:text-neon-green transition-colors">
+            {profile.social.linkedin}
+          </a>
+        </div>
+        <div className="flex items-center gap-3">
+          <MapPin className="w-4 h-4 text-neon-green" />
+          <span>Patna, India</span>
+        </div>
+      </div>
       
       <div className="glass-panel p-8 rounded-2xl border border-white/10">
         <Form {...form}>
@@ -52,7 +87,7 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel className="text-neon-green font-mono">NAME</FormLabel>
                   <FormControl>
-                    <Input placeholder="Cyber Punk" {...field} className="bg-black/50 border-white/10 focus:border-neon-green text-white" />
+                    <Input placeholder="Ajay Kumar" {...field} className="bg-black/50 border-white/10 focus:border-neon-green text-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -66,7 +101,7 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel className="text-neon-green font-mono">EMAIL</FormLabel>
                   <FormControl>
-                    <Input placeholder="cyber@punk.com" {...field} className="bg-black/50 border-white/10 focus:border-neon-green text-white" />
+                    <Input placeholder="ajaysinghrajput03092005@gmail.com" {...field} className="bg-black/50 border-white/10 focus:border-neon-green text-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

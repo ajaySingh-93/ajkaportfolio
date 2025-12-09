@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { profile } from "@/data/profile";
 
 export function Footer() {
   return (
@@ -9,16 +10,18 @@ export function Footer() {
         </p>
         
         <div className="flex items-center gap-6">
-          <a href="#" className="text-gray-400 hover:text-neon-purple transition-colors hover:text-glow">
+          <a href={profile.social.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-neon-purple transition-colors hover:text-glow">
             <Github className="w-5 h-5" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors hover:text-glow">
+          <a href={profile.social.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-neon-cyan transition-colors hover:text-glow">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-neon-green transition-colors hover:text-glow">
-            <Twitter className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors hover:text-glow">
+          {profile.social.twitter ? (
+            <a href={profile.social.twitter} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-neon-green transition-colors hover:text-glow">
+              <Twitter className="w-5 h-5" />
+            </a>
+          ) : null}
+          <a href={`mailto:${profile.social.email}`} className="text-gray-400 hover:text-neon-pink transition-colors hover:text-glow">
             <Mail className="w-5 h-5" />
           </a>
         </div>

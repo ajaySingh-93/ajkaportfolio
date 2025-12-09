@@ -41,15 +41,15 @@ export default function About() {
             <ul className="space-y-4 font-mono text-sm">
               <li className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-gray-500">LOCATION</span>
-                <span className="text-neon-cyan">CYBERSPACE</span>
+                <span className="text-neon-cyan">Patna, India</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-gray-500">CURRENT_STATUS</span>
-                <span className="text-neon-pink animate-pulse">AVAILABLE FOR HIRE</span>
+                <span className="text-neon-pink animate-pulse">Learning & Building</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-gray-500">INTERESTS</span>
-                <span className="text-white">RAVE, CODE, AI</span>
+                <span className="text-white">Clean code, UI/UX, Problem solving</span>
               </li>
             </ul>
             
@@ -57,8 +57,8 @@ export default function About() {
               <h4 className="text-sm text-gray-500 mb-4">EDUCATION</h4>
               <div className="space-y-4">
                 <div className="p-4 bg-white/5 rounded-lg border-l-2 border-neon-purple">
-                  <h5 className="font-bold text-white">B.S. Computer Science</h5>
-                  <p className="text-xs text-gray-400">Future Tech University • 2020-2024</p>
+                  <h5 className="font-bold text-white">Bachelor of Computer Applications (BCA) – Final Year Student</h5>
+                  <p className="text-xs text-gray-400">Ongoing</p>
                 </div>
               </div>
             </div>

@@ -1,34 +1,38 @@
 export const projects = [
   {
     id: 1,
-    title: "NEON_DASH",
-    description: "A cyberpunk-inspired analytics dashboard with real-time data visualization.",
-    tech: ["React", "D3.js", "Tailwind", "Socket.io"],
+    title: "DAWAI NOW – Medicine Distribution Management System",
+    description:
+      "Backend & Database Design — managed medicine stock, distributors, retailers, and sales/returns with structured ER diagrams and DFDs.",
+    tech: ["C / Java (as used)", "SQL", "DBMS"],
     link: "#",
-    github: "#"
+    github: "#",
   },
   {
     id: 2,
-    title: "VOID_CHAT",
-    description: "End-to-end encrypted messaging app with ephemeral messages.",
-    tech: ["Next.js", "WebRTC", "Redis", "Prisma"],
+    title: "To-Do List Application",
+    description:
+      "Python Developer — simple productivity app to add, update, and delete tasks with basic persistence.",
+    tech: ["Python"],
     link: "#",
-    github: "#"
+    github: "#",
   },
   {
     id: 3,
-    title: "SYNTH_WAVE_GEN",
-    description: "AI-powered music generator for synthwave tracks.",
-    tech: ["Python", "TensorFlow", "React", "Web Audio API"],
+    title: "EMI Calculator",
+    description:
+      "VB6 / Logic Developer — desktop tool to calculate monthly EMIs, total payable, and interest with input validation.",
+    tech: ["VB 6.0"],
     link: "#",
-    github: "#"
+    github: "#",
   },
   {
     id: 4,
-    title: "CRYPTO_PUNK_NFT",
-    description: "Generative art collection and marketplace on Ethereum.",
-    tech: ["Solidity", "Ethers.js", "IPFS", "Next.js"],
+    title: "Personal Portfolio – Gen-Z Rave Theme",
+    description:
+      "Front-End Developer — animated dark rave portfolio with 3D visuals, command palette, and responsive layouts.",
+    tech: ["Next.js", "TypeScript", "three.js"],
     link: "#",
-    github: "#"
-  }
+    github: "#",
+  },
 ];

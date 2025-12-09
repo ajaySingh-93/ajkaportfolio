@@ -1,6 +1,7 @@
 import { Section } from "@/components/ui/section";
 import { experience } from "@/data/experience";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
 export default function Experience() {
@@ -47,5 +48,3 @@ export default function Experience() {
     </Section>
   );
 }
-
-import { Badge } from "@/components/ui/badge";

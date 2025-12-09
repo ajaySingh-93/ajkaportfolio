@@ -1,18 +1,26 @@
 export const skills = [
   {
     category: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Rust", "SQL", "GLSL"]
+    items: ["C", "C++", "Java (Basics)", "Python", "JavaScript", "TypeScript"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "Three.js", "Tailwind CSS", "Framer Motion", "Vite"]
+    category: "Web Technologies",
+    items: ["HTML5", "CSS3", "Bootstrap / Tailwind", "React (Basics)", "Next.js (Learning)"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "PostgreSQL", "Redis", "Drizzle ORM", "Docker", "AWS"]
+    items: ["Node.js", "Express.js", "REST APIs"],
   },
   {
-    category: "Design",
-    items: ["Figma", "Blender", "Adobe After Effects", "Spline"]
-  }
+    category: "Database",
+    items: ["MySQL", "Oracle / SQL basics"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "GitHub", "VS Code", "Replit", "Cursor"],
+  },
+  {
+    category: "Core CS / Others",
+    items: ["Data Structures & Algorithms (learning)", "OOP", "DBMS fundamentals", "Problem Solving"],
+  },
 ];
