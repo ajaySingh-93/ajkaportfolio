@@ -4,11 +4,12 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "dev:client": "vite dev --port 5000",
-  "dev": "cross-env NODE_ENV=development tsx server/index.ts",
-  "build": "tsx script/build.ts",
+    "build": "tsx script/build.ts",
+    "preview": "vite preview --config vite.config.ts --host --port 5000",
     "start": "NODE_ENV=production node dist/index.cjs",
-  "check": "tsc",
+    "check": "tsc",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {

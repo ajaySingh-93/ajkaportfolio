@@ -1,25 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "Expert-Stacker/package.json",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["Expert-Stacker/dist/**"]
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "Expert-Stacker/server/index.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "Expert-Stacker/dist/public/$1"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }

@@ -34,6 +34,12 @@ npm run build
 npm start
 ```
 
+## 🚀 Deployment (Vercel)
+
+- Local development: `npm install` then `npm run dev`
+- Production build: `npm run build`
+- Deployment: push to `main` and Vercel auto-deploys
+
 ## 🎨 Project Structure
 
 ```
